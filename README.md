@@ -1,6 +1,6 @@
 # Jangaat (Debug Thinking)
 
-Jangaat (anciennement Debug Thinking) est une plateforme SaaS conçue pour les développeurs juniors et les étudiants en informatique. Son but est d'accompagner les développeurs dans leur raisonnement scientifique face à un bug (méthode de debug) en utilisant un mentor IA (JOOB Sensei) qui les guide sans jamais leur donner la solution finale ni le code corrigé.
+Jangaat est une plateforme SaaS conçue pour les développeurs juniors et les étudiants en informatique. Son but est d'accompagner les développeurs juniors dans leur raisonnement face à un bug (méthode de debug) en utilisant un mentor IA (JOOB Sensei) qui les guide sans jamais leur donner la solution finale ni le code corrigé.
 
 ## 🎯 Proposition de valeur
 "Transforme ta manière de penser quand tu codes, pas juste ton code."
@@ -63,13 +63,10 @@ Le projet suit une architecture Client-Serveur séparée :
 
 *(Vous pouvez également utiliser le fichier `start.bat` fourni à la racine pour lancer les deux environnements simultanément sous Windows).*
 
-## 🔒 Sécurité
-
-Les fichiers `.env` contenant des informations sensibles (comme la clé API OpenAI ou la chaîne de connexion à la base de données) sont exclus du contrôle de version. Assurez-vous de ne jamais les partager publiquement.
 
 ## 💬 Discussions
 
 L'onglet **Discussions** est activé sur ce dépôt. N'hésitez pas à l'utiliser pour poser des questions, proposer des idées ou échanger sur les méthodes de débogage.
 
 ---
-*Ce projet est maintenu par ix-e.*
+*Ce projet est maintenu par JOOB.*
