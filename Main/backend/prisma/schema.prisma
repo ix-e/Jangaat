@@ -1,0 +1,55 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id        String   @id @default(uuid())
+  email     String   @unique
+  password  String   // Mot de passe hashé
+  sessions  DebugSession[]
+}
+
+model DebugSession {
+  id               String   @id @default(uuid())
+  userId           String?  // Optional for now to allow anonymous testing
+  description      String
+  expectedBehavior String
+  actualBehavior   String
+  createdAt        DateTime @default(now())
+  
+  hypotheses       Hypothesis[]
+  tests            TestCase[]
+  analysis         Analysis?
+
+  user             User?     @relation(fields: [userId], references: [id])
+}
+
+model Hypothesis {
+  id            String       @id @default(uuid())
+  sessionId     String
+  content       String
+  validityScore Int?
+  session       DebugSession @relation(fields: [sessionId], references: [id])
+}
+
+model TestCase {
+  id             String       @id @default(uuid())
+  sessionId      String
+  description    String
+  result         String
+  session        DebugSession @relation(fields: [sessionId], references: [id])
+}
+
+model Analysis {
+  id               String       @id @default(uuid())
+  sessionId        String       @unique
+  issuesDetected   String[]
+  suggestions      String[]
+  
+  session          DebugSession @relation(fields: [sessionId], references: [id])
+}
