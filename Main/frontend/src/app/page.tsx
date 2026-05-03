@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { Bug, Brain, ArrowRight, Terminal } from "lucide-react";
 import { useEffect, useState } from "react";
 
@@ -57,7 +58,7 @@ export default function Home() {
 
       <nav className="relative z-10 flex items-center justify-between px-8 py-6 max-w-7xl mx-auto w-full">
         <div className="flex items-center gap-3">
-          <Terminal className="text-purple-400" size={28} />
+          <Image src="/logo.png" alt="Jangaat Logo" width={32} height={32} className="rounded-md" />
           <span className="font-bold text-2xl tracking-widest text-slate-100">JANGAAT</span>
         </div>
         <Link href="/session" className="text-sm font-medium text-slate-300 hover:text-white transition-colors">
@@ -114,18 +115,8 @@ export default function Home() {
 
       </main>
 
-      {/* JOOB Flagship Logo Bottom Right */}
-      <div className="fixed bottom-8 right-8 z-50 flex items-center justify-center group cursor-default">
-        <div className="relative">
-           {/* Glow effect */}
-           <div className="absolute inset-0 bg-white blur-md opacity-20 group-hover:opacity-40 transition-opacity rounded-xl"></div>
-           {/* Black Box */}
-           <div className="relative w-14 h-14 bg-black rounded-xl flex items-center justify-center shadow-[0_10px_30px_rgba(0,0,0,0.8)] border border-slate-800">
-             <span className="text-3xl font-black text-transparent bg-clip-text bg-gradient-to-br from-slate-200 to-slate-500">
-               J
-             </span>
-           </div>
-        </div>
+      <div className="fixed bottom-8 right-8 z-50 opacity-40 hover:opacity-80 transition-opacity select-none pointer-events-none">
+        <Image src="/logo.png" alt="Jangaat Logo" width={56} height={56} className="rounded-xl shadow-2xl" />
       </div>
 
     </div>

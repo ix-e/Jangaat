@@ -15,6 +15,9 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Jangaat with JOOB AI",
   description: "JOOB Sensei AI : Le mentor qui révolutionne votre manière de debugger.",
+  icons: {
+    icon: "/logo.png",
+  },
 };
 
 export default function RootLayout({

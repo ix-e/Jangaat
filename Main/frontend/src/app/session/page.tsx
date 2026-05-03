@@ -416,10 +416,8 @@ ${chatMessages.map(m => `[${m.role.toUpperCase()}] : ${m.content}`).join('\n\n')
             </div>
 
             {/* Black J Logo Bottom Right */}
-            <div className="absolute bottom-6 right-6 opacity-30 select-none pointer-events-none">
-              <div className="w-14 h-14 bg-black rounded-xl flex items-center justify-center font-bold text-slate-400 text-3xl shadow-lg border border-slate-800">
-                J
-              </div>
+            <div className="absolute bottom-6 right-6 opacity-20 select-none pointer-events-none">
+              <Image src="/logo.png" alt="Jangaat Logo" width={50} height={50} className="rounded-lg" />
             </div>
 
           </div>
@@ -442,7 +440,7 @@ ${chatMessages.map(m => `[${m.role.toUpperCase()}] : ${m.content}`).join('\n\n')
             <ArrowLeft size={20} /> Retour
           </Link>
           <div className="flex items-center gap-6">
-            <Image src="/logo.png" alt="Jangaat Logo" width={36} height={36} className="rounded-md opacity-90" />
+            <Image src="/icon.png" alt="Jangaat Logo" width={36} height={36} className="rounded-md opacity-90" />
             <div className="flex gap-3">
               {[1, 2, 3, 4].map(i => (
                 <div key={i} className={`h-2 w-12 rounded-full transition-all duration-500 ${step >= i ? 'bg-purple-500 shadow-[0_0_10px_rgba(168,85,247,0.5)]' : 'bg-slate-800'}`} />
@@ -496,10 +494,8 @@ ${chatMessages.map(m => `[${m.role.toUpperCase()}] : ${m.content}`).join('\n\n')
       </div>
       
       {/* Black J Logo Bottom Right */}
-      <div className="fixed bottom-8 right-8 opacity-30 select-none pointer-events-none z-0">
-         <div className="w-16 h-16 bg-black rounded-xl flex items-center justify-center font-bold text-slate-400 text-4xl shadow-lg border border-slate-800">
-           J
-         </div>
+      <div className="fixed bottom-8 right-8 opacity-20 select-none pointer-events-none z-0">
+         <Image src="/logo.png" alt="Jangaat Logo" width={60} height={60} className="rounded-xl" />
       </div>
 
     </div>
