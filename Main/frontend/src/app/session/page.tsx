@@ -79,8 +79,9 @@ export default function SessionPage() {
 
   const handleSubmit = async () => {
     setLoading(true);
+    const API_URL = process.env.NEXT_PUBLIC_API_URL || "http://localhost:4000";
     try {
-      const response = await fetch("http://localhost:4000/api/analyze", {
+      const response = await fetch(`${API_URL}/api/analyze`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData)
@@ -112,8 +113,9 @@ export default function SessionPage() {
     setChatInput("");
     setIsChatLoading(true);
 
+    const API_URL = process.env.NEXT_PUBLIC_API_URL || "http://localhost:4000";
     try {
-      const response = await fetch("http://localhost:4000/api/chat", {
+      const response = await fetch(`${API_URL}/api/chat`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
