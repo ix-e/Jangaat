@@ -18,3 +18,7 @@ yarn-error.log*
 # Fichiers système
 .DS_Store
 Thumbs.db
+
+# Scripts et Dossiers de travail (non destinés au dépôt public)
+github_deploy.ps1
+Ressources/
